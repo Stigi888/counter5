@@ -11,8 +11,6 @@ function App() {
 
     const addCounter = () => {
         const r = Math.round(Math.random() * 10);
-        // const updatedCounters = [...counters];
-        // updatedCounters.push({id: uuid(), count: num});
         setCounters([...counters, r]);
     };
 
@@ -63,11 +61,11 @@ const resetAll = () => {
 
 return (
     <div className="App">
-        <div className="container">
+        <div className="list-group-item">
         Counter
-        <button className="btn btn-success" onClick={addCounter}>Add Counter</button>
-        <button className="btn btn-warning" onClick={resetAll}>Reset All</button>
-        <button className="btn btn-danger" onClick={deleteAll}>Delete All</button>
+        <button className="btn btn-success ml-2 mr-2" onClick={addCounter}>Add Counter</button>
+        <button className="btn btn-warning ml-2 mr-2" onClick={resetAll}>Reset All</button>
+        <button className="btn btn-danger ml-2 mr-2" onClick={deleteAll}>Delete All</button>
         <hr/>
         {counters.map((el, i) =>
             (<Counter
